@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CinemaClient"
         mc:Ignorable="d"
         Style="{StaticResource WindowStyle}"
-        Title="Film" Height="500" Width="600" Loaded="Window_Loaded">
+        Title="Film" Height="600" Width="500" Loaded="Window_Loaded">
     <Window.Resources>
         <local:BinaryToBitmapConverter x:Key="BinaryToBitmapConverter" />
         <local:EpochToDateStringConverter x:Key="EpochToDateStringConverter" />

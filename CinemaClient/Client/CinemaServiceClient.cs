@@ -13,7 +13,8 @@ namespace CinemaClient.Client
 {
     public class CinemaServiceClient
     {
-        private const string BaseURL = "http://192.168.0.105:8080/cinema/";
+        private const string Host = "192.168.0.107:8080";
+        private const string BaseURL = "http://" + Host + "/cinema/";
         private HttpClient client;
 
         public CinemaServiceClient()
@@ -109,7 +110,8 @@ namespace CinemaClient.Client
             request.RequestUri = new Uri(url);
             request.Method = httpMethod;
             request.Headers.Add("IP-Address", GetIPAddress());
-            request.Headers.Add("Host", "192.168.0.105:8080");
+            request.Headers.Add("Cache-Control", "no-cache");
+            request.Headers.Add("Host", Host);
             request.Headers.Add("Accept", "*/*");
             request.Headers.Add("Connection", "keep-alive");
             return request;
